@@ -1,0 +1,79 @@
+*{
+  padding: 0;margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: cornflowerblue;
+}
+.container{
+  width: 30rem;
+  position: relative;
+  background-color: rgb(232, 243, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3rem;
+  padding: 1rem;
+  box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.3);
+}
+.container .grid-layout{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(auto,1fr);
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.container h1{
+  font-size: 3rem;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  letter-spacing: 0.3rem;
+  color: cornflowerblue;
+  padding: 0.3rem;
+  margin-bottom: 1.7rem;
+}
+.container button{
+  color: white;
+  font-size: 1.4rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 0.5rem;
+  background-color: cornflowerblue;
+  margin-top: 1.7rem;
+  border: 2px solid white;
+  box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.3);
+  cursor: pointer;
+}
+.container .grid-layout .tile{
+  width: 6.5rem;
+  height: 6.5rem;
+  padding: 0 1.6rem;
+  border: 3px solid rgb(54, 3, 83);
+}
+.container .grid-layout .tile:nth-child(3n-3)
+{
+  border-right: none;
+}
+.container .grid-layout .tile:nth-child(3n-2){
+  border-left: none;
+}
+.container .grid-layout .tile:nth-child(1),.container .grid-layout .tile:nth-child(2),.container .grid-layout .tile:nth-child(3){
+  border-top: none;
+}
+.container .grid-layout .tile:nth-child(7),.container .grid-layout .tile:nth-child(8),.container .grid-layout .tile:nth-child(9){
+  border-bottom: none;
+}
+.tile{
+  color: cornflowerblue;
+}
+.winningTile{
+  background-color: rgb(116, 204, 255);
+  color: white;
+}
